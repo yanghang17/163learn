@@ -56,7 +56,6 @@
      console.log(x);
   2.
     function parseQuery(query) {
-      query=query.splice(-1,1,':"');
       query=query.replace(/=/g ,':\"');
       query=query.replace(/&/g,'\",');
       query="{"+query+"\"}";
