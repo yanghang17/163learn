@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>JStest</title>
+  <meta charset="UTF-8">
+  <title>JStest</title>
 </head>
 <body>
   <script>
@@ -14,23 +14,23 @@
   	var number = random();
   	console.log(number);
   3.
-  	function multiply() {
-      var length = arguments.length,
-        product = 1,
-        parameter;
+       function multiply() {
+         var length = arguments.length,
+         product = 1,
+         parameter;
       for (var i = 0; i < length; i++) {
-      	parameter = arguments[i]
-      	product = product * parameter;
+      	 parameter = arguments[i]
+      	 product = product * parameter;
       }
       return product;
   	}
-  	var numb = multiply(1,2,3,4,5);
-  	console.log(numb);
+      var numb = multiply(1,2,3,4,5);
+      console.log(numb);
   4.
-  	function Person(name,age) {
-  	  Person.prototype.introduce = function() {
-  	    var hi = "I am " + name + "," + "I am " + age + " years old";
-  	    return hi;
+      function Person(name,age) {
+  	 Person.prototype.introduce = function() {
+  	 var hi = "I am " + name + "," + "I am " + age + " years old";
+  	 return hi;
   	  }
   	}
   	var jerry = new Person("jerry",2);
