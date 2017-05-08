@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JStest</title>
+</head>
+<body>
+  <script>
+  1.
+  	function random() {
+	  var numb = Math.floor(Math.random()*1000);
+	  return numb;
+  	}
+  	var number = random();
+  	console.log(number);
+  3.
+  	function multiply() {
+      var length = arguments.length,
+        product = 1,
+        parameter;
+      for (var i = 0; i < length; i++) {
+      	parameter = arguments[i]
+      	product = product * parameter;
+      }
+      return product;
+  	}
+  	var numb = multiply(1,2,3,4,5);
+  	console.log(numb);
+  4.
+  	function Person(name,age) {
+  	  Person.prototype.introduce = function() {
+  	    var hi = "I am " + name + "," + "I am " + age + " years old";
+  	    return hi;
+  	  }
+  	}
+  	var jerry = new Person("jerry",2);
+  	console.log(jerry.introduce());
+  	var tom = new Person("Tom",12);
+  	console.log(tom.introduce());
+  5.  
+     function escapeHTML(htmlStr) {
+      return htmlStr.replace(/[<>"&]/g,function (m0) {
+        switch (m0) {
+          case '<':
+          return '&lt;';
+          case '>':
+          return '&gt;';
+          case '"':
+          return '&quot;';
+          case '&':
+          return '&amp;';
+        }
+      });
+     }
+     var x = escapeHTML('<div>Tom&Jerry</div>'); 
+     console.log(x);
+  2.
+    function parseQuery(query) {
+      query=query.splice(-1,1,':"');
+      query=query.replace(/=/g ,':\"');
+      query=query.replace(/&/g,'\",');
+      query="{"+query+"\"}";
+      return query;
+    }
+    var jerry = parseQuery("name=jerry&age=1");
+    console.log(jerry);
+    var tom = parseQuery("name=tom&age=12&gender&");
+    console.log(tom);
+  </script>
+</body>
+</html>
